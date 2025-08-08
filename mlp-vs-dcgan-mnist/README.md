@@ -41,7 +41,7 @@ The goal is to demonstrate the importance of architectural choices when designin
 │   ├── mlp_after_training_images.png
 │   └── cnn_after_training_images.png
 └── README.md
-
+```
 ---
 
 ## Getting Started
