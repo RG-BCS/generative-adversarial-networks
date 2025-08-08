@@ -27,20 +27,22 @@ The goal is to demonstrate the importance of architectural choices when designin
 ## Project Structure
 
 ```bash
-.
-├── models.py                 # Contains MLP-GAN and DCGAN architectures
-├── utils.py                  # Training loops, noise sampling, visualization
-├── demo_script.py           # Script version of the training and evaluation
-├── demo.ipynb               # Jupyter notebook with explanations and outputs
-├── requirements.txt         # List of dependencies
-├── images/                  # Output training images and plots
-│   ├── mlp_loss.png
-│   ├── cnn_loss.png
-│   ├── mlp_training_images.png
-│   ├── cnn_training_images.png
-│   ├── mlp_after_training_images.png
-│   └── cnn_after_training_images.png
-└── README.md
+
+mlp-vs-dcgan-mnist/
+   ├── models.py                 # Contains MLP-GAN and DCGAN architectures
+   ├── utils.py                  # Training loops, noise sampling, visualization
+   ├── demo_script.py            # Script version of the training and evaluation
+   ├── demo.ipynb                # Jupyter notebook with explanations and outputs
+   ├── requirements.txt          # List of dependencies
+   ├── images/                   # Output training images and plots
+   │   ├── mlp_loss.png
+   │   ├── cnn_loss.png
+   │   ├── mlp_training_images.png
+   │   ├── cnn_training_images.png
+   │   ├── mlp_after_training_images.png
+   │   └── cnn_after_training_images.png
+   └── README.md
+
 ```
 ---
 
