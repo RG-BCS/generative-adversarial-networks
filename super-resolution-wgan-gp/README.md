@@ -37,7 +37,7 @@ dataset, focusing on training stability and high-quality image generation.
 ---
 
 ## Project Structure
-
+```bash
 super_resolution_wgan/
         ├── models.py                   # Contains Generator and Discriminator architectures
         ├── utils.py                    # Data loading, training loops, gradient penalty, helper functions
@@ -46,6 +46,8 @@ super_resolution_wgan/
         ├── demo.ipynb                  # Jupyter notebook with explanations, training, and results visualization
         ├── requirements.txt            # Python dependencies for easy setup
         ├── README.md                   # This documentation file
+
+```
 
 ---
 
