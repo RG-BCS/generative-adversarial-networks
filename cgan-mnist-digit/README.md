@@ -1,6 +1,17 @@
-# Conditional GAN on MNIST Digits
+# Conditional GAN for MNIST Digit Generation
 
-![Sample Generated Digits](generated_epoch_9.png)
+This project implements a **Conditional Generative Adversarial Network (CGAN)** trained on the **MNIST dataset**
+to generate high-quality, class-conditional digit images.
+
+Unlike traditional GANs that generate images without control, CGANs allow you to **specify the digit class** (e.g., generate a "5" or a "9").
+This is achieved by **conditioning both the generator and discriminator on class labels**.
+
+What makes this implementation unique is its **simplicity and stability**:
+- Uses **vanilla GAN loss** (no Wasserstein, no hinge loss, no tricks)
+- Achieves **sharp and clean generation in just 1–3 epochs**
+- Demonstrates **stable training curves**, even with minimal tuning
+
+If you're looking for a clean, minimal, and well-commented CGAN implementation that just works — this is it.
 
 ---
 
@@ -56,20 +67,20 @@ The result? Fast, stable training producing clear, class-conditional MNIST digit
     → Conv2D → BatchNorm → LeakyReLU (x2)
     → GlobalMaxPooling2D → Dropout → Dense(1, sigmoid)
 
-
-
 ---
 
 ## Project Structure
 
+```bash
 cgan-mnist-digit/
         ├── models.py                   # Core CGAN model definition
         ├── utils.py                    # Training utilities: losses, gradients, plotting
-        ├── dataloader_generator.py     # Dataset class and DataLoader setup for DIV2K
-        ├── demo_script.py              # Script for training and evaluation
+        ├── demo_script.py              # Full training script with data pipeline
         ├── demo.ipynb                  # Jupyter notebook with explanations, training, and results visualization
         ├── requirements.txt            # Python dependencies for easy setup
         ├── README.md                   # This documentation file
+
+```
 
 ---
 
@@ -92,15 +103,59 @@ cgan-mnist-digit/
 ---
 
 
+## Training Results
 
+- **Stable training** achieved quickly, with no mode collapse or oscillation
+- Vanilla loss combined with LeakyReLU and GlobalMaxPooling2D gives robust gradients and convergence
+- Clear digit generation after only a few epochs
 
+| Epoch | Generator Loss | Discriminator Loss | Gen Gradient Norm | Disc Gradient Norm |
+|-------|----------------|--------------------|-------------------|--------------------|
+| 0     | 1.85           | 1.00               | 2.33              | 2.97               |
+| 1     | 1.03           | 1.25               | 1.04              | 3.46               |
+| 2     | 0.97           | 1.25               | 1.25              | 2.69               |
 
+---
 
+![train loss](train_loss.png)
+![grad nomrs](grad_norms.png)
 
+---
+### Sample Images During Training at epoch 0,1,2,5 and 9 show high-quality, clear digit synthesis.
 
+![Sample Generated Digits](generated_epoch_0.png)
+![Sample Generated Digits](generated_epoch_1.png)
+![Sample Generated Digits](generated_epoch_2.png)
+![Sample Generated Digits](generated_epoch_5.png)
+![Sample Generated Digits](generated_epoch_9.png)
 
+---
 
+### Images From The Latent Space Grid For Digits 5,2,4 and 8
 
+![laten_space_grid](class_5.png)
+![laten_space_grid](class_2.png)
+![laten_space_grid](class_8.png)
+![laten_space_grid](class_4.png)
 
+---
 
+## How to Run
+
+1. Clone this repository or download files.
+2. Run the `demo.ipynb` notebook on [Google Colab](https://colab.research.google.com/) for an easy, interactive experience.
+3. Upload `model.py` and `utils.py` to the Colab environment.
+4. Follow the notebook instructions to train and visualize results.
+
+---
+
+## Conclusion
+
+This project demonstrates:
+
+- The feasibility of stable and fast CGAN training without complex tricks
+- The effectiveness of spatial label embedding and GlobalMaxPooling in discriminator
+- How simple architectural design combined with vanilla loss can produce excellent conditional generation
+
+---
 
