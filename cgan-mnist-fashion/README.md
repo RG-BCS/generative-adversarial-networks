@@ -56,10 +56,7 @@ cgan-mnist-fashion/
         ├── demo.ipynb            # Annotated notebook for training + visualization
         ├── requirements.txt      # All necessary dependencies
         └── README.md             # This documentation file
-
-
 ```
-
 ---
 
 ## Getting Started
@@ -102,13 +99,9 @@ cgan-mnist-fashion/
 ###  Images Generated During Training Epoch 1,10,20 and 30
 
 ![generated_image_training](generated_fashion_0.png)
-
 ![generated_image_training](generated_fashion_10.png)
-
 ![generated_image_training](generated_fashion_20.png)
-
 ![generated_image_training](generated_fashion_29.png)
-
 
 ---
 
