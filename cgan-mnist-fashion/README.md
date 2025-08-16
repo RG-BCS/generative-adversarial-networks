@@ -116,8 +116,6 @@ cgan-mnist-fashion/
 
 ## Conclusion
 
-Conclusion
-
 This project demonstrates the successful implementation of a Conditional Generative Adversarial Network (CGAN) on the
 Fashion-MNIST dataset using TensorFlow 2. The model learns to generate class-conditional fashion images by incorporating
 both latent noise and label embeddings.
