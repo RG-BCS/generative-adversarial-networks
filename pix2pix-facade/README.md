@@ -159,4 +159,5 @@ Key takeaways:
 Despite moderate performance (Avg PSNR: 12.89, SSIM: 0.1130), the project showcases a strong foundation for extending to other datasets (e.g., maps, edges2shoes), improving realism with perceptual losses, or deploying for real-world scene parsing applications.
 
 This work serves both as an educational exercise and a launchpad for more advanced research in **conditional generative models**.
+
 ---
