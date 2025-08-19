@@ -125,9 +125,6 @@ CycleGAN was trained for **20 epochs** on the Horse ↔ Zebra dataset. Below are
 ![image_4](test_result_Zebra_to_Horse_004.png)
 ![image_5](test_result_Zebra_to_Horse_005.png)
 
-
-> These results are generated during training and saved every few epochs (see `demo_script.py`).
-
 ---
 
 ## Conclusion
