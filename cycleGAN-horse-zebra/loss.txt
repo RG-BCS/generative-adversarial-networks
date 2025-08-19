@@ -1,0 +1,60 @@
+
+Epoch 0/20 | gen_1_loss: 3.9604 | gen_2_loss: 3.7898 | disc_1_loss: 0.6840 | disc_2_loss: 0.6655 | time: 5.3641 min
+→ Gradient norms — Gen_1: 8.6953 | Gen_2: 8.8176 | Disc_1: 3.3101 | Disc_2: 4.1369
+
+Epoch 1/20 | gen_1_loss: 3.0883 | gen_2_loss: 2.8748 | disc_1_loss: 0.6533 | disc_2_loss: 0.6045 | time: 4.5044 min
+→ Gradient norms — Gen_1: 8.2241 | Gen_2: 7.2179 | Disc_1: 3.5586 | Disc_2: 5.8535
+
+Epoch 2/20 | gen_1_loss: 3.0918 | gen_2_loss: 2.8415 | disc_1_loss: 0.6453 | disc_2_loss: 0.5839 | time: 4.5067 min
+→ Gradient norms — Gen_1: 9.0022 | Gen_2: 7.0836 | Disc_1: 3.7434 | Disc_2: 6.7013
+
+Epoch 3/20 | gen_1_loss: 3.0729 | gen_2_loss: 2.7647 | disc_1_loss: 0.6419 | disc_2_loss: 0.5554 | time: 4.5082 min
+→ Gradient norms — Gen_1: 9.9101 | Gen_2: 7.1326 | Disc_1: 3.6645 | Disc_2: 6.8797
+
+Epoch 4/20 | gen_1_loss: 3.0521 | gen_2_loss: 2.6912 | disc_1_loss: 0.6433 | disc_2_loss: 0.5358 | time: 4.5081 min
+→ Gradient norms — Gen_1: 10.4607 | Gen_2: 7.1462 | Disc_1: 3.4736 | Disc_2: 6.8558
+
+Epoch 5/20 | gen_1_loss: 3.0240 | gen_2_loss: 2.6183 | disc_1_loss: 0.6408 | disc_2_loss: 0.5228 | time: 4.5075 min
+→ Gradient norms — Gen_1: 11.2567 | Gen_2: 7.5522 | Disc_1: 3.6832 | Disc_2: 7.2204
+
+Epoch 6/20 | gen_1_loss: 2.9946 | gen_2_loss: 2.6057 | disc_1_loss: 0.6337 | disc_2_loss: 0.5139 | time: 4.5073 min
+→ Gradient norms — Gen_1: 11.9885 | Gen_2: 7.8229 | Disc_1: 4.1211 | Disc_2: 6.8976
+
+Epoch 7/20 | gen_1_loss: 2.9635 | gen_2_loss: 2.5616 | disc_1_loss: 0.6370 | disc_2_loss: 0.5133 | time: 4.5093 min
+→ Gradient norms — Gen_1: 12.1625 | Gen_2: 7.8670 | Disc_1: 4.0716 | Disc_2: 7.0508
+
+Epoch 8/20 | gen_1_loss: 2.9552 | gen_2_loss: 2.5096 | disc_1_loss: 0.6359 | disc_2_loss: 0.5028 | time: 4.5044 min
+→ Gradient norms — Gen_1: 12.5681 | Gen_2: 8.2058 | Disc_1: 4.1246 | Disc_2: 7.3980
+
+Epoch 9/20 | gen_1_loss: 2.9560 | gen_2_loss: 2.5056 | disc_1_loss: 0.6313 | disc_2_loss: 0.4950 | time: 4.5079 min
+→ Gradient norms — Gen_1: 12.3667 | Gen_2: 8.5800 | Disc_1: 4.2924 | Disc_2: 7.1923
+
+Epoch 10/20 | gen_1_loss: 2.8998 | gen_2_loss: 2.4541 | disc_1_loss: 0.6297 | disc_2_loss: 0.4879 | time: 4.5058 min
+→ Gradient norms — Gen_1: 11.6157 | Gen_2: 8.4276 | Disc_1: 4.1372 | Disc_2: 7.0732
+
+Epoch 11/20 | gen_1_loss: 2.9271 | gen_2_loss: 2.4430 | disc_1_loss: 0.6293 | disc_2_loss: 0.4805 | time: 4.5067 min
+→ Gradient norms — Gen_1: 12.1368 | Gen_2: 8.5810 | Disc_1: 4.3167 | Disc_2: 7.1778
+
+Epoch 12/20 | gen_1_loss: 3.0264 | gen_2_loss: 2.5040 | disc_1_loss: 0.6242 | disc_2_loss: 0.4627 | time: 4.5037 min
+→ Gradient norms — Gen_1: 12.5777 | Gen_2: 8.8070 | Disc_1: 4.6127 | Disc_2: 7.4668
+
+Epoch 13/20 | gen_1_loss: 3.0127 | gen_2_loss: 2.4663 | disc_1_loss: 0.6259 | disc_2_loss: 0.4563 | time: 4.5087 min
+→ Gradient norms — Gen_1: 13.4026 | Gen_2: 8.5168 | Disc_1: 4.5665 | Disc_2: 7.6253
+
+Epoch 14/20 | gen_1_loss: 2.9423 | gen_2_loss: 2.4252 | disc_1_loss: 0.6229 | disc_2_loss: 0.4635 | time: 4.5037 min
+→ Gradient norms — Gen_1: 12.7005 | Gen_2: 8.8106 | Disc_1: 4.4485 | Disc_2: 7.4670
+
+Epoch 15/20 | gen_1_loss: 3.0911 | gen_2_loss: 2.4701 | disc_1_loss: 0.6167 | disc_2_loss: 0.4366 | time: 4.5056 min
+→ Gradient norms — Gen_1: 13.8452 | Gen_2: 9.0250 | Disc_1: 4.6467 | Disc_2: 7.4012
+
+Epoch 16/20 | gen_1_loss: 2.9966 | gen_2_loss: 2.4424 | disc_1_loss: 0.6214 | disc_2_loss: 0.4631 | time: 4.5096 min
+→ Gradient norms — Gen_1: 13.3882 | Gen_2: 9.0578 | Disc_1: 4.6764 | Disc_2: 7.8652
+
+Epoch 17/20 | gen_1_loss: 2.9843 | gen_2_loss: 2.4200 | disc_1_loss: 0.6211 | disc_2_loss: 0.4523 | time: 4.5052 min
+→ Gradient norms — Gen_1: 13.1356 | Gen_2: 9.2153 | Disc_1: 4.6238 | Disc_2: 7.5030
+
+Epoch 18/20 | gen_1_loss: 2.9658 | gen_2_loss: 2.4158 | disc_1_loss: 0.6189 | disc_2_loss: 0.4601 | time: 4.5060 min
+→ Gradient norms — Gen_1: 12.7777 | Gen_2: 9.0970 | Disc_1: 4.6919 | Disc_2: 7.6983
+
+Epoch 19/20 | gen_1_loss: 2.9674 | gen_2_loss: 2.4111 | disc_1_loss: 0.6150 | disc_2_loss: 0.4446 | time: 4.5073 min
+→ Gradient norms — Gen_1: 13.0024 | Gen_2: 9.4606 | Disc_1: 4.6389 | Disc_2: 7.3705
