@@ -1,4 +1,4 @@
-import os
+import os,io
 import time
 import numpy as np
 import tensorflow as tf
@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from tensorflow import keras
 from IPython import display
 
-
+"""
 def plot_generated_images_tf(generator_model, digit_label, latent_dim=32, grid_dim=15,
                               dim1=0, dim2=1, save_path=None):
     """
@@ -56,6 +56,50 @@ def plot_generated_images_tf(generator_model, digit_label, latent_dim=32, grid_d
     else:
         plt.show()
 
+"""
+def plot_generated_images_tf(generator_model, digit_label,
+                             latent_dim=32, grid_dim=15,
+                             dim1=0, dim2=1, save_path=None):
+    digit_size = 28  # Assuming MNIST
+    figure = np.zeros((digit_size * grid_dim, digit_size * grid_dim))
+    grid_x = np.linspace(-4, 4, grid_dim)  # Create grid values in latent space (2D slice)
+    grid_y = np.linspace(-4, 4, grid_dim)[::-1]
+
+    for i, yi in enumerate(grid_y):
+        for j, xi in enumerate(grid_x):
+            z_sample = np.zeros((1, latent_dim), dtype=np.float32)
+            z_sample[0, dim1] = xi
+            z_sample[0, dim2] = yi
+            
+            label = tf.constant([digit_label], dtype=tf.int32)
+            x_decoded = generator_model.generate(tf.convert_to_tensor(z_sample), label)
+            x_decoded = x_decoded[0, :, :, 0].numpy()
+            x_decoded = (x_decoded + 1) / 2.0
+
+            digit = x_decoded.reshape(digit_size, digit_size)
+            slice_i = slice(i * digit_size, (i + 1) * digit_size)
+            slice_j = slice(j * digit_size, (j + 1) * digit_size)
+            figure[slice_i, slice_j] = digit
+
+    plt.figure(figsize=(10, 10))
+    plt.imshow(figure, cmap='Greys_r')
+    plt.title("CGAN: Images from Latent Space Grid", fontsize=16)
+    plt.xlabel(f"z[{dim1}]")
+    plt.ylabel(f"z[{dim2}]")
+    plt.grid(False)
+
+    if save_path:
+        if isinstance(save_path, (str, bytes, os.PathLike)):
+            os.makedirs(os.path.dirname(save_path), exist_ok=True)
+            plt.savefig(save_path, bbox_inches='tight')
+            print(f"Saved image to {save_path}")
+        elif isinstance(save_path, io.BytesIO):
+            plt.savefig(save_path, format="png", bbox_inches='tight')
+        else:
+            raise ValueError("save_path must be a file path or BytesIO")
+        plt.close()
+    else:
+        plt.show()
 
 def grad_norm(grads):
     """
