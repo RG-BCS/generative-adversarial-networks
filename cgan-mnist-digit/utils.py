@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from tensorflow import keras
 from IPython import display
 
-"""
+'''
 def plot_generated_images_tf(generator_model, digit_label, latent_dim=32, grid_dim=15,
                               dim1=0, dim2=1, save_path=None):
     """
@@ -56,7 +56,7 @@ def plot_generated_images_tf(generator_model, digit_label, latent_dim=32, grid_d
     else:
         plt.show()
 
-"""
+'''
 def plot_generated_images_tf(generator_model, digit_label,
                              latent_dim=32, grid_dim=15,
                              dim1=0, dim2=1, save_path=None):
