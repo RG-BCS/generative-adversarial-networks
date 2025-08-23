@@ -1,5 +1,4 @@
 # server.py
-# server.py
 import io
 import tensorflow as tf
 from tensorflow import keras
@@ -11,7 +10,7 @@ from fastapi import FastAPI
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, conint
 
-from model import CGAN_MNIST_Digits_2   # your class
+from model import CGAN_MNIST_Digits_2
 from utils import plot_generated_images_tf
 
 # --- constants ---
@@ -22,9 +21,11 @@ CLASS_LABELS = 10
 app = FastAPI(title="CGAN MNIST Digit Generator")
 
 Digit = conint(ge=0, le=9)
+
 class InputRequest(BaseModel):
     value: Digit
     grid: bool = False
+    grid_size: int | None = None   # optional, only used if grid=True
 
 # Load trained model parts
 model_cgan_trained = CGAN_MNIST_Digits_2(
@@ -44,12 +45,13 @@ def gen_images(req: InputRequest):
     buf = io.BytesIO()
 
     if req.grid:
-        # Generate a 10x10 grid
+        # Use provided grid_size or fallback to 10
+        grid_dim = req.grid_size if req.grid_size else 10
         plot_generated_images_tf(
             model_cgan_trained,
             digit_label=int(req.value),
             latent_dim=LATENT_DIM,
-            grid_dim=10,
+            grid_dim=grid_dim,
             dim1=0, dim2=1,
             save_path=buf
         )
