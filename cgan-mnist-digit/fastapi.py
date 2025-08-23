@@ -32,7 +32,7 @@ def gen_images(req:InputRequest):
     
     if req.grid:
         plot_generated_images_tf(model_cgan_trained,digit_label=req.value,
-                                 LATENT_DIM, grid_dim=10, dim1=0, dim2=1,save_path=save_path)
+                                 latent_dim=LATENT_DIM, grid_dim=10, dim1=0, dim2=1,save_path=save_path)
     else:  
         # --- generate a single digit ---
         noise = tf.random.normal([1, LATENT_DIM])
