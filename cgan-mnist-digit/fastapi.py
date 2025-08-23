@@ -32,7 +32,7 @@ model_cgan_trained = CGAN_MNIST_Digits_2(
     dropout=0.45, alpha=0.2, class_labels=CLASS_LABELS
 )
 
-# ⚠️ Load *all* trained submodules (save these during training)
+# Load *all* trained submodules (save these during training)
 model_cgan_trained.embed_gen    = keras.models.load_model("embed_gen.keras")
 model_cgan_trained.latent_image = keras.models.load_model("latent_image.keras")
 model_cgan_trained.gen_model    = keras.models.load_model("generator.keras")
