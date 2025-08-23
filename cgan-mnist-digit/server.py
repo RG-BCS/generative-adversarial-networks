@@ -4,6 +4,9 @@ from pydantic import BaseModel, conint
 
 import os, uuid  # use uuid.uuid4().hex to generate random text at every call
 
+import tensorflow as tf
+import matplotlib.pyplot as plt
+
 from model import CGAN_MNIST_Digits_2
 from utils import plot_generated_images_tf
 from demo_script import LATENT_DIM,IMAGE_SHAPE,CLASS_LABELS
