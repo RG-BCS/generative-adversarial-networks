@@ -68,7 +68,27 @@ The result? Fast, stable training producing clear, class-conditional MNIST digit
     → GlobalMaxPooling2D → Dropout → Dense(1, sigmoid)
 
 ---
+## Live Deployment
 
+This project is deployed as a FastAPI web service on **Render**.  
+You can try it live here:
+
+[https://generative-adversarial-networks-2.onrender.com/docs](https://generative-adversarial-networks-2.onrender.com/docs)
+
+The API provides a `/gen_images` endpoint where you can request digit generation by specifying the digit class.
+
+### Example Request
+
+```json
+POST /gen_images
+Content-Type: application/json
+
+{
+  "value": 9,
+  "grid": false,
+  "grid_size": 0
+}
+---
 ## Project Structure
 
 ```bash
