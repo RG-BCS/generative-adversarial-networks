@@ -77,6 +77,7 @@ You can try it live here:
 
 The API provides a `/gen_images` endpoint where you can request digit generation by specifying the digit class.
 
+---
 ### Example Request
 
 ```json
@@ -88,7 +89,9 @@ Content-Type: application/json
   "grid": false,
   "grid_size": 0
 }
+
 ---
+
 ## Project Structure
 
 ```bash
