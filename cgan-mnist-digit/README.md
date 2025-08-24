@@ -78,6 +78,7 @@ You can try it live here:
 The API provides a `/gen_images` endpoint where you can request digit generation by specifying the digit class.
 
 ---
+
 ### Example Request
 
 ```json
@@ -104,7 +105,6 @@ cgan-mnist-digit/
         ├── README.md                   # This documentation file
 
 ```
-
 ---
 
 ## Getting Started
